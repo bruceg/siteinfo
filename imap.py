@@ -19,6 +19,7 @@ patterns = PATTERNS([
 	(r"OK Courier-IMAP ready.", "Courier IMAP"),
 	(r"OK \[.*\] Courier-IMAP ready.", "Courier IMAP"),
 	(r"OK Welcome to Binc IMAP (v\d+\.\d+\.\d+) ", "Binc IMAP"),
+	(r"OK imapfront", "mailfront"),
     ])
 
 def identify(host):
