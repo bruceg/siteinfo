@@ -16,6 +16,9 @@ patterns = PATTERNS([
     (r"^214 Serv-U, registered to: ", "Serv-U FTP"),
     (r" FTP server \(NcFTPd (\S+)\) ready", "NcFTPd"),
     (r" WarFTPd (\S+) \(.*\) Ready", "WarFTPd"),
+    (r" NetPresenz (v\S+) awaits your command", "NetPresenz"),
+    (r"214 Send server bug reports to <support@stairways.com.au>.",
+     "NetPresenz"),
     ])
 
 def identify(host):
