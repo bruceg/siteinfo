@@ -8,6 +8,8 @@ patterns = PATTERNS([
     (r"OK \S+ IMAP4rev1 (v[\S]+) server ready", "UWashington IMAP"),
     (r"OK Microsoft Exchange IMAP4rev1 server (version \S+) \(.*\) ready",
      "Microsoft Exchange" ),
+    (r"OK Microsoft Exchange \d+ IMAP4rev1 server (version \S+) \(.*\) ready",
+     "Microsoft Exchange" ),
     (r"OK Netscape IMAP4 Service (\S+) on \S+ at ", "Netscape"),
     (r"OK NTMail IMAP4 server (\S+) ready", "NTMail"),
     (r"OK \S+ Cyrus IMAP4 (v\S+) server ready", "Cyrus"),
