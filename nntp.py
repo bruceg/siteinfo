@@ -10,8 +10,10 @@ patterns = PATTERNS([
     (r"20\d .* \(Typhoon (v\S+)\)", "Typhoon"),
     (r"20\d Supernews NNRP server ready - http://www.supernews.com",
      "Supernews custom"),
-    (r"Netscape-News/([^\s]+)", "Netscape News"),
-    (r"Netscape-News", "Netscape News"),
+    (r" Netscape-News/([^\s]+)", "Netscape News"),
+    (r" Netscape-News", "Netscape News"),
+    (r" Lotus Domino NNTP Server for \S+ \((Release .*)\)", "Lotus Domino),
+    (r" Lotus Domino NNTP Server", "Lotus Domino"),
     ])
 
 def identify(host):

@@ -6,6 +6,7 @@ websites = {
 	'Supernews': 'http://www.supernews.com/',
 	'wu-ftpd': 'http://www.wu-ftpd.org/',
 	'NetPresenz': 'http://www.stairways.com/netpresenz/',
+	'Lotus Domino': 'http://www.lotus.com/home.nsf/welcome/domino',
 }
 
 def find(name):
