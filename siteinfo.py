@@ -82,8 +82,10 @@ def main():
         if all or form.has_key(service[1]):
             print "Identifying %s service...<br>" % service[1]
             sys.stdout.flush()
-            try: response = service[0].identify(host)
-            except: response = ('Connection failed', None)
+            try:
+                response = service[0].identify(host) or (None, None)
+            except:
+                response = ('Connection failed', None)
 	    service[2] = response[0]
 	    service[3] = response[1]
 
