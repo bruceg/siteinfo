@@ -15,6 +15,7 @@ websites = {
 	'Courier IMAP': 'http://www.inter7.com/courierimap',
 	'Courier': 'http://www.courier-mta.org/',
 	'mailfront': 'http://untroubled.org/mailfront/',
+	'DNews': 'http://netwinsite.com/dnews.htm',
 }
 
 def find(name):

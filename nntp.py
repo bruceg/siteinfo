@@ -18,6 +18,7 @@ patterns = PATTERNS([
 	(r"20\d \S+ Netscape-Collabra/(\S+) \S+ NNRP ready", "Netscape Collabra"),
     (r" Lotus Domino NNTP Server for \S+ \((Release .*)\)", "Lotus Domino"),
     (r" Leafnode NNTP Daemon, version (\S+) running", "Leafnode"),
+    (r" newsfeeds DNEWS Version ([^,]+),", "DNews"),
     ])
 
 def identify(host):
