@@ -13,7 +13,7 @@ import smtp
 import imap
 import ftp
 
-from websites import websites
+import websites
 
 mailto_unknown = 'bruceg-lists-unknown-server@daedalus.bfsmedia.sk.ca'
 
@@ -30,12 +30,12 @@ def log(msg):
     except: pass
 
 services = (
-    [ ftp,  "FTP",  "" ],
-    [ http, "HTTP", "" ],
-    [ imap, "IMAP", "" ],
-    [ nntp, "NNTP", "" ],
-    [ pop3, "POP3", "" ],
-    [ smtp, "SMTP", "" ]
+    [ ftp,  "FTP",  "", "" ],
+    [ http, "HTTP", "", "" ],
+    [ imap, "IMAP", "", "" ],
+    [ nntp, "NNTP", "", "" ],
+    [ pop3, "POP3", "", "" ],
+    [ smtp, "SMTP", "", "" ]
     )
 
 MSG_ERROR = """<html>
@@ -83,8 +83,9 @@ def main():
             print "Identifying %s service...<br>" % service[1]
             sys.stdout.flush()
             try: response = service[0].identify(host)
-            except: response = 'Connection failed'
-            service[2] = response
+            except: response = ('Connection failed', None)
+	    service[2] = response[0]
+	    service[3] = response[1]
 
     print "</p>"
     print "<table border=1>"
@@ -102,12 +103,14 @@ def main():
     for service in services:
         if all or form.has_key(service[1]):
 	    name = service[2] or 'Unknown'
+	    version = service[3] or ''
             print "<tr><td align=center>%s</td>" % service[1]
-	    if websites.has_key(name):
-	        print "<td><a href=\"%s\">%s</a></td></tr>" % (
-		    websites[name], name )
+	    link = websites.find(name)
+	    if link:
+	        print "<td><a href=\"%s\">%s</a> %s</td></tr>" % (
+		    link, name, version )
 	    else:
-	        print "<td>%s</td></tr>" % name
+	        print "<td>%s %s</td></tr>" % ( name, version )
 
     print "</table><hr>"
 

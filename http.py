@@ -13,5 +13,5 @@ def identify(host):
     patterns.attempts = response.headers
     try: str = response['server']
     except: str = None
-    return str
+    return (str, None)
 

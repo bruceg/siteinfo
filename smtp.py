@@ -11,7 +11,7 @@ class SMTP(smtplib.SMTP):
 
 patterns = PATTERNS([
     (r" InterScan VirusWall NT ESMTP (\S+) ", "InterScan VirusWall"),
-    (r" ESMTP server \(InterMail v(\S+).*\) ready", "InterMail"),
+    (r" ESMTP server \(InterMail (v\S+).*\) ready", "InterMail"),
     (r"This SMTP server is a part of the InterMail E-mail system.", "InterMail"),
     (r"information about InterMail, please see ", "InterMail"),
     (r" ESMTP Service \(Lotus Domino (Release \S+).*\) ready", "Lotus Domino"),

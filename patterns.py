@@ -16,7 +16,7 @@ class PATTERNS:
             if m:
                 g = m.groups()
                 if len(g) > 0:
-                    return pattern[1] + " " + m.group(1)
+                    return (pattern[1], m.group(1))
                 else:
-                    return pattern[1]
+                    return (pattern[1], None)
         return None
