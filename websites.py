@@ -7,6 +7,10 @@ websites = {
 	'wu-ftpd': 'http://www.wu-ftpd.org/',
 	'NetPresenz': 'http://www.stairways.com/netpresenz/',
 	'Lotus Domino': 'http://www.lotus.com/home.nsf/welcome/domino',
+	'SIMS': 'http://www.stalker.com/SIMS/',
+	'Leafnode', 'http://www.leafnode.org/',
+	'OpenMail', 'http://www.hp.com/go/openmail',
+	'NcFTPd', 'http://www.ncftpd.com/ncftpd/',
 }
 
 def find(name):

@@ -12,8 +12,8 @@ patterns = PATTERNS([
      "Supernews custom"),
     (r" Netscape-News/([^\s]+)", "Netscape News"),
     (r" Netscape-News", "Netscape News"),
-    (r" Lotus Domino NNTP Server for \S+ \((Release .*)\)", "Lotus Domino),
-    (r" Lotus Domino NNTP Server", "Lotus Domino"),
+    (r" Lotus Domino NNTP Server for \S+ \((Release .*)\)", "Lotus Domino"),
+    (r" Leafnode NNTP Daemon, version (\S+) running", "Leafnode"),
     ])
 
 def identify(host):

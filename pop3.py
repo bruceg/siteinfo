@@ -35,6 +35,7 @@ patterns = PATTERNS([
     (r" POP3 service ready \[\d+\] \(MDaemon (v.+)\)$", "MDaemon"),
     (r" Cyrus POP3 (v\S+) server ready$", "Cyrus"),
     (r" Lotus Notes POP3 server version (\S+) ready", "Lotus Domino"),
+    (r" Stalker POP3 Server (\S+) at \s+ ready", "SIMS"),
     (r"^$", "No identification strings, possibly qmail")
     ])
 
