@@ -52,10 +52,10 @@ def error(msg):
 
 HTML_HEAD = """<html>
 <head>
-<title>Site Software Identification for '%(host)s'</title>
+<title>Site Software Identification for '%(host)s' (%(ip)s)</title>
 </head>
 <body>
-<p><h1><center>Site Software Identification for '%(host)s'</center></h1></p>
+<p><h1><center>Site Software Identification for '%(host)s' (%(ip)s)</center></h1></p>
 
 <p>Please direct all comments and especially omissions to
 <a href=\"mailto:bruceg@em.ca\">Bruce Guenter</a>.</p>
@@ -72,7 +72,7 @@ def main():
     all = form.has_key('ALL')
 
     try:
-        host = socket.gethostbyname(host)
+        ip = socket.gethostbyname(host)
     except:
         error("Host not found.")
 
@@ -83,7 +83,7 @@ def main():
             print "Identifying %s service...<br>" % service[1]
             sys.stdout.flush()
             try:
-                response = service[0].identify(host) or (None, None)
+                response = service[0].identify(ip) or (None, None)
             except:
                 response = ('Connection failed', None)
 	    service[2] = response[0]
