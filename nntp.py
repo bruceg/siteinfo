@@ -9,7 +9,7 @@ patterns = PATTERNS([
      "Microsoft Exchange"),
     (r"20\d .* \(Typhoon (v\S+)\)", "Typhoon"),
     (r"20\d Supernews NNRP server ready - http://www.supernews.com",
-     "Supernews custom", "http://www.supernews.com/"),
+     "Supernews custom"),
     (r"Netscape-News/([^\s]+)", "Netscape News"),
     (r"Netscape-News", "Netscape News"),
     ])
