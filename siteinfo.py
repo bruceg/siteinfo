@@ -15,7 +15,7 @@ import ftp
 
 import websites
 
-mailto_unknown = 'bruceg-lists-unknown-server@daedalus.bfsmedia.sk.ca'
+mailto_unknown = 'lists-unknown-server@bruce-guenter.dyndns.org'
 
 def log(msg):
     date = time.localtime(time.time())
@@ -96,11 +96,11 @@ def main():
     print "<th>Software</th>"
     print "</tr>"
 
-    logmsg = host
-    for service in services:
-        if all or form.has_key(service[1]):
-            logmsg = "%s %s" % (logmsg, service[1])
-    log(logmsg)
+    #logmsg = host
+    #for service in services:
+    #    if all or form.has_key(service[1]):
+    #        logmsg = "%s %s" % (logmsg, service[1])
+	#log(logmsg)
 
     for service in services:
         if all or form.has_key(service[1]):
@@ -119,8 +119,7 @@ def main():
     for service in services:
         if (all or form.has_key(service[1])) and not service[2]:
             pipe = os.popen("/usr/sbin/sendmail -t", "w")
-            pipe.write("To: Bruce Guenter <%s>\n"
-                       "From: Bruce Guenter <bruceg@em.ca>\n"
+            pipe.write("To: <%s>\n"
                        "Subject: Unknown %s on '%s'\n"
                        "\n"
                        "Response strings were:\n" % (
