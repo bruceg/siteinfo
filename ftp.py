@@ -21,6 +21,10 @@ patterns = PATTERNS([
      "NetPresenz"),
     (r"^220 \S+ FTP server \(NcFTPd (.+)\) ready", "NcFTPd"),
     (r"^214 publicfile ", "publicfile"),
+	(r"^220[- ]TwoFTPd server ready", "TwoFTPd"),
+	(r"^220 Authenticate first", "TwoFTPd"),
+	(r"^200 Awaiting your commands, master\.\.\.", "TwoFTPd"),
+	(r"^502 No help is available\.", "TwoFTPd"),
     ])
 
 def identify(host):

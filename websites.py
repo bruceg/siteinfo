@@ -18,6 +18,7 @@ websites = {
 	'DNews': 'http://netwinsite.com/dnews.htm',
 	'Twister': 'http://www.nntpd.com/twister.shtml',
 	'Microsoft Exchange': 'http://www.microsoft.com/exchange/',
+	'TwoFTPd': 'http://untroubled.org/twoftpd/',
 }
 
 def find(name):
