@@ -4,8 +4,10 @@ from patterns import PATTERNS
 patterns = PATTERNS([
     (r"20\d NNTP Service Microsoft.* Internet Services \S+ Version: (\S+)",
      "Microsoft IIS"),
+	(r"20\d NNTP Service \d+\.\d+\.\d+ Version: (\S+)", "Microsoft IIS?"),
     (r"20\d \S+ InterNetNews NNRP server INN (\S+) \S+ ready", "INN"),
 	(r"20\d \S+ InterNetNews NNRP server INN (\S+) ready", "INN"),
+	(r"20\d \S+ InterNetNews NNRP server INN (\S+) \(.+\) ready", "INN"),
     (r"20\d Microsoft Exchange Internet News Service (Version \S+)",
      "Microsoft Exchange"),
     (r"20\d .* \(Typhoon (v\S+)\)", "Typhoon"),
