@@ -12,7 +12,7 @@ websites = {
 	'OpenMail': 'http://www.hp.com/go/openmail',
 	'NcFTPd': 'http://www.ncftpd.com/ncftpd/',
 	'publicfile': 'http://cr.yp.to/publicfile.html',
-	'Courier IMAP': 'http://www.inter7.com/courierimap',
+	'Courier IMAP': 'http://www.courier-mta.org/imap/',
 	'Courier': 'http://www.courier-mta.org/',
 	'mailfront': 'http://untroubled.org/mailfront/',
 	'DNews': 'http://netwinsite.com/dnews.htm',
