@@ -1,4 +1,4 @@
-from ftplib import FTP
+from ftplib import FTP, error_perm
 from patterns import PATTERNS
 
 patterns = PATTERNS([
@@ -24,9 +24,16 @@ patterns = PATTERNS([
     ])
 
 def identify(host):
-    h = FTP(host)
-    w = h.getwelcome()
-    help = h.sendcmd("HELP")
-    h.quit()
-    return patterns.match(w) or \
-           patterns.match(help)
+	h = FTP(host)
+	w = h.getwelcome()
+	try: nocmd = h.sendcmd("TESTING")
+	except error_perm, nocmd: pass
+	try: noop = h.sendcmd("NOOP")
+	except error_perm, noop: pass
+	try: help = h.sendcmd("HELP")
+	except error_perm, help: pass
+	h.quit()
+	return patterns.match(w) or \
+		   patterns.match(nocmd) or \
+		   patterns.match(noop) or \
+		   patterns.match(help)
