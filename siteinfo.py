@@ -72,7 +72,7 @@ def main():
     all = form.has_key('ALL')
 
     try:
-        socket.gethostbyname(host)
+        host = socket.gethostbyname(host)
     except:
         error("Host not found.")
 
