@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/sh
+exec 2>&1
 echo "Content-Type: text/html"
 echo
-exec python -c 'import siteinfo; siteinfo.main()' 2>&1
+exec python -c 'import siteinfo; siteinfo.main()'
