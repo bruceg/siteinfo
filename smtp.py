@@ -77,6 +77,7 @@ patterns = PATTERNS([
     (r"ESMTP Service .NPlex ", "NPlex"),
     (r"Generic SMTP handler", "Raptor firewall"),
     (r"Netscape Mail Server", "Netscape Messaging Server, formerly Netscape Mail Server"),
+	(r"^\S+ mailfront ESMTP", "mailfront"),
     (r" SMTP Server SLmail ", "SLmail"),
     (r"EMWAC SMTP Receiver", "EMWAC SMTP Receiver"),
     (r"GroupWise SMTP.MIME", "GroupWise"),
@@ -135,9 +136,9 @@ patterns = PATTERNS([
     ])
 
 def identify(host):
-    connection = SMTP()
-    resp = connection.connect(host)
-    return patterns.match(resp) or \
+	connection = SMTP()
+	(code,resp) = connection.connect(host)
+	return patterns.match(resp) or \
            patterns.match(connection.docmd('help')) or \
            patterns.match(connection.docmd('xxxx')) or \
            patterns.match(connection.docmd('mail from:<nobody@nowhere.net>')) or \
