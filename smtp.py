@@ -27,6 +27,7 @@ patterns = PATTERNS([
     (r"MDaemon .* Help system currently inactive", "MDaemon"),
     (r"Microsoft Exchange Internet Mail Connector", "MS Exchange"),
     (r"Microsoft Exchange Internet Mail Service", "MS Exchange"),
+    (r" Microsoft ESMTP MAIL Service, (Version: \S+) ready", "MS Exchange?"),
     (r"CheckPoint FireWall-1 secure SMTP server", "CheckPoint firewall"),
     (r"Stalker Internet Mail Server .*is ready", "Stalker"),
     (r"NT Server running Internet Shopper", "NT Mail"),
