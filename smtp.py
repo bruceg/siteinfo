@@ -10,6 +10,10 @@ class SMTP(smtplib.SMTP):
         return msg
 
 patterns = PATTERNS([
+    (r" InterScan VirusWall NT ESMTP (\S+) ", "InterScan VirusWall"),
+    (r" ESMTP server \(InterMail v(\S+).*\) ready", "InterMail"),
+    (r"This SMTP server is a part of the InterMail E-mail system.", "InterMail"),
+    (r"information about InterMail, please see ", "InterMail"),
     (r" ESMTP Service \(Lotus Domino (Release \S+).*\) ready", "Lotus Domino"),
     (r"Sorry, you are not authorized to make this connection", "Raptor proxy"),
     (r"Server ESMTP \(Sun Internet Mail Server sims\.(.+)\)",
@@ -19,6 +23,7 @@ patterns = PATTERNS([
     (r"MERCUR SMTP-Server .v.* for Windows NT ready at", "MERCUR"),
     (r"MERCUR SMTP-Server .v.* for Windows 95 ready at", "MERCUR"),
     (r"forging of mail requires recognizable SMTP", "unknown (requires recognizable SMTP)"),
+    (r" ESMTP service ready .* \(MDaemon ([^\)]+)\)", "MDaemon"),
     (r"MDaemon .* Help system currently inactive", "MDaemon"),
     (r"Microsoft Exchange Internet Mail Connector", "MS Exchange"),
     (r"Microsoft Exchange Internet Mail Service", "MS Exchange"),
@@ -31,6 +36,9 @@ patterns = PATTERNS([
     (r"Mercury 1\... ESMTP server ready", "Mercury"),
     (r"Mercury 1\... SMTP server ready", "Mercury"),
     (r"PC.TCP SMTPSRV by FTP Software", "PC/TCP SMTPSRV"),
+    (r"VOPMail ESMTP Receiver Version (\S+) Ready", "VOPMail"),
+    (r"VOPMail SMTP Receiver Version (\S+) Ready", "VOPMail"),
+    (r"VOPMail ESMTP Receiver Version ", "VOPMail"),
     (r"VOPMail SMTP Receiver Version ", "VOPMail"),
     (r"Running on The Major BBS with ", "Major BBS"),
     (r" ESMTP .IPAD 2....... ready at", "IPAD"),
@@ -59,7 +67,10 @@ patterns = PATTERNS([
     (r"FirstClass Mail Server ", "FirstClass"),
     (r"This is Fwmail version ", "Fwmail"),
     (r"NetManage SMTP service", "NetManage SMTP service"),
-    (r"MailSite SMTP Receiver", "MailSite SMTP Receiver"),
+    (r"MailSite ESMTP Receiver Version (\S+) Ready", "MailSite"),
+    (r"MailSite SMTP Receiver Version (\S+) Ready", "MailSite"),
+    (r"MailSite ESMTP Receiver", "MailSite"),
+    (r"MailSite SMTP Receiver", "MailSite"),
     (r"Worldgroup SMTP server", "Worldgroup SMTP server"),
     (r"Duhmail..Black Hole v", "sendmail# *.sid.ncr.doe.ca"),
     (r"ESMTP Service .NPlex ", "NPlex"),
@@ -116,6 +127,7 @@ patterns = PATTERNS([
     (r"Help \.\.\. Not recognized", "unknown (Help ... Not recognized)"),
     (r"HELP \.\.\. Not recognized", "unknown (Help ... Not recognized)"),
     (r"For more info use .HELP", "sendmail"),
+    (r"unable to read controls..#4.3.0", "qmail"),
     (r"unimplemented..#5.5.1", "qmail"),
     (r" All set, fire away", "MSMail SMTP gateway"),
     (r"Complaints.bugs to", "MMDF")
