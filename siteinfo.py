@@ -13,6 +13,8 @@ import smtp
 import imap
 import ftp
 
+from websites import websites
+
 mailto_unknown = 'bruceg-lists-unknown-server@daedalus.bfsmedia.sk.ca'
 
 def log(msg):
@@ -87,8 +89,8 @@ def main():
     print "</p>"
     print "<table border=1>"
     print "<tr>"
-    print "<td align=center><u>Service</u></td>"
-    print "<td align=center><u>Software</u></td>"
+    print "<th>Service</th>"
+    print "<th>Software</th>"
     print "</tr>"
 
     logmsg = host
@@ -99,8 +101,13 @@ def main():
 
     for service in services:
         if all or form.has_key(service[1]):
+	    name = service[2] or 'Unknown'
             print "<tr><td align=center>%s</td>" % service[1]
-            print "<td>%s</td></tr>" % (service[2] or 'Unknown')
+	    if websites.has_key(name):
+	        print "<td><a href=\"%s\">%s</a></td></tr>" % (
+		    websites[name], name )
+	    else:
+	        print "<td>%s</td></tr>" % name
 
     print "</table><hr>"
 
