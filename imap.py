@@ -17,6 +17,7 @@ patterns = PATTERNS([
     (r"OK CommuniGate Pro IMAP Server (\S+) at \S+ ready", "CommuniGate Pro"),
     (r"OK OpenMail IMAP server (\S+) ready", "OpenMail"),
 	(r"OK Courier-IMAP ready.", "Courier IMAP"),
+	(r"OK Welcome to Binc IMAP (v\d+\.\d+\.\d+) ", "Binc IMAP"),
     ])
 
 def identify(host):
