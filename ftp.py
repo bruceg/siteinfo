@@ -17,9 +17,10 @@ patterns = PATTERNS([
     (r" FTP server \(NcFTPd (\S+)\) ready", "NcFTPd"),
     (r" WarFTPd (\S+) \(.*\) Ready", "WarFTPd"),
     (r" NetPresenz (v\S+) awaits your command", "NetPresenz"),
-    (r"214 Send server bug reports to <support@stairways.com.au>.",
+    (r"^214 Send server bug reports to <support@stairways.com.au>.",
      "NetPresenz"),
-    (r"220 \S+ FTP server \(NcFTPd (.+)\) ready", "NcFTPd"),
+    (r"^220 \S+ FTP server \(NcFTPd (.+)\) ready", "NcFTPd"),
+    (r"^214 publicfile ", "publicfile"),
     ])
 
 def identify(host):

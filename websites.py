@@ -11,6 +11,7 @@ websites = {
 	'Leafnode': 'http://www.leafnode.org/',
 	'OpenMail': 'http://www.hp.com/go/openmail',
 	'NcFTPd': 'http://www.ncftpd.com/ncftpd/',
+	'publicfile': 'http://cr.yp.to/publicfile.html',
 }
 
 def find(name):
