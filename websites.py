@@ -16,6 +16,7 @@ websites = {
 	'Courier': 'http://www.courier-mta.org/',
 	'mailfront': 'http://untroubled.org/mailfront/',
 	'DNews': 'http://netwinsite.com/dnews.htm',
+	'Twister': 'http://www.nntpd.com/twister.shtml',
 }
 
 def find(name):

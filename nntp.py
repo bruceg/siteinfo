@@ -19,6 +19,7 @@ patterns = PATTERNS([
     (r" Lotus Domino NNTP Server for \S+ \((Release .*)\)", "Lotus Domino"),
     (r" Leafnode NNTP Daemon, version (\S+) running", "Leafnode"),
     (r" newsfeeds DNEWS Version ([^,]+),", "DNews"),
+	(r" \(Twister (v\S+)\)", "Twister"),
     ])
 
 def identify(host):
