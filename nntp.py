@@ -2,6 +2,8 @@ from nntplib import NNTP
 from patterns import PATTERNS
 
 patterns = PATTERNS([
+    (r"20\d NNTP Service Microsoft.* Internet Services \S+ Version: (\S+)",
+     "Microsoft IIS"),
     (r"20\d \S+ InterNetNews NNRP server INN (\S+) \S+ ready", "INN"),
     (r"20\d Microsoft Exchange Internet News Service (Version \S+)",
      "Microsoft Exchange"),

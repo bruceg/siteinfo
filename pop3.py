@@ -3,6 +3,7 @@ from patterns import PATTERNS
 import re
 
 patterns = PATTERNS([
+    (r"MailSite POP3 Server (\S+) Ready", "MailSite"),
     (r"Microsoft Exchange POP3 server (version \S+) ready",
      "Microsoft Exchange"),
     (r"Cubic Circle's (v\S+) \S+ POP3 ready",
