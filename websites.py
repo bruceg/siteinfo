@@ -14,6 +14,7 @@ websites = {
 	'publicfile': 'http://cr.yp.to/publicfile.html',
 	'Courier IMAP': 'http://www.inter7.com/courierimap',
 	'Courier': 'http://www.courier-mta.org/',
+	'mailfront': 'http://untroubled.org/mailfront/',
 }
 
 def find(name):
