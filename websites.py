@@ -20,6 +20,7 @@ websites = {
 	'Microsoft Exchange': 'http://www.microsoft.com/exchange/',
 	'TwoFTPd': 'http://untroubled.org/twoftpd/',
 	'Binc IMAP': 'http://www.bincimap.org/',
+	'vsftpd': 'http://vsftpd.beasts.org/',
 }
 
 def find(name):

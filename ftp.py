@@ -25,6 +25,8 @@ patterns = PATTERNS([
 	(r"^220 Authenticate first", "TwoFTPd"),
 	(r"^200 Awaiting your commands, master\.\.\.", "TwoFTPd"),
 	(r"^502 No help is available\.", "TwoFTPd"),
+	(r"\(vsFTPd (\S+)\)", "vsftpd"),
+	(r"You're talking to vsftpd.", "vsftpd"),
     ])
 
 def identify(host):
