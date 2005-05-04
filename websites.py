@@ -21,6 +21,14 @@ websites = {
 	'TwoFTPd': 'http://untroubled.org/twoftpd/',
 	'Binc IMAP': 'http://www.bincimap.org/',
 	'vsftpd': 'http://vsftpd.beasts.org/',
+	'Pure-FTPd': 'http://pureftpd.org/',
+	'Dovecot': 'http://www.dovecot.org/',
+	'imap-uw': 'http://www.washington.edu/imap/',
+	'MailMax': 'http://www.smartmax.com/',
+	'DMail': 'http://netwinsite.com/dmail_first.htm',
+	'FTGate': 'http://www.ftgate.com/',
+	'Lyris': 'http://www.lyris.com/',
+	'Marc Huber\'s FTP daemon': 'http://www.pro-bono-publico.de/projects/ftpd.html',
 }
 
 def find(name):

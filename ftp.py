@@ -9,8 +9,8 @@ patterns = PATTERNS([
     (r" NcFTPd Server \(free personal license\) ready", "NcFTPd"),
     (r" NcFTPd Server \(licensed copy\) ready", "NcFTPd"),
     (r" Microsoft FTP Service \((Version \S+)\)", "Microsoft FTP"),
-    (r"^220.Serv-U FTP-Server (v\S+) for WinSock ready", "Serv-U FTP"),
-    (r"^220.Serv-U FTP-Server (v\S+ build \S+) for WinSock ready",
+    (r"^220.Serv-U FTP.Server (v\S+) for WinSock ready", "Serv-U FTP"),
+    (r"^220.Serv-U FTP.Server (v\S+ build \S+) for WinSock ready",
      "Serv-U FTP"),
     (r"^214 Serv-U (version \S+), registered to: ", "Serv-U FTP"),
     (r"^214 Serv-U, registered to: ", "Serv-U FTP"),
@@ -27,6 +27,11 @@ patterns = PATTERNS([
 	(r"^502 No help is available\.", "TwoFTPd"),
 	(r"\(vsFTPd (\S+)\)", "vsftpd"),
 	(r"You're talking to vsftpd.", "vsftpd"),
+	(r"Pure-FTPd", "Pure-FTPd"),
+	(r"ftpd - Round-Robin File Transfer Server, (version \S+)",
+	  "Marc Huber's FTP daemon"),
+	(r"\(C\)\S+ by Marc Huber <marc@sixpack.de>", "Marc Huber's FTP daemon"),
+	(r"^214 That's all, folks\.$", "Marc Huber's FTP daemon"),
     ])
 
 def identify(host):

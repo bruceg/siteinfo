@@ -58,6 +58,7 @@ patterns = PATTERNS([
     (r"post.office E-mail system", "Post.Office"),
     (r"Mercury SMTP server ready", "Mercury"),
     (r"CommuniGate SMTP is ready", "CommuniGate SMTP"),
+    (r"Netscape Messaging Server (\S+ Patch \S+)", "Netscape Messaging Server, formerly Netscape Mail Server"),
     (r"Netscape Messaging Server", "Netscape Messaging Server, formerly Netscape Mail Server"),
     (r"ESMTP Service .Worldmail ", "Worldmail"),
     (r"ESMTP Service .WorldMail ", "Worldmail"),
@@ -132,7 +133,14 @@ patterns = PATTERNS([
     (r"unable to read controls..#4.3.0", "qmail"),
     (r"unimplemented..#5.5.1", "qmail"),
     (r" All set, fire away", "MSMail SMTP gateway"),
-    (r"Complaints.bugs to", "MMDF")
+    (r"Complaints.bugs to", "MMDF"),
+	(r"\S+ \(Mail-Max (Version \S+),", "MailMax"),
+	(r"Welcome to Mail-Max (v\S+)", "MailMax"),
+	(r"\S+ DSMTP ESMTP Server (v\S+)", "DMail"),
+	(r"Help for DSMTP (v\S+)", "DMail"),
+	(r"\S+ ESMTP Lyris service ready", "Lyris"),
+	(r"User unknown to Lyris List Manager", "Lyris"),
+	(r"SMTP/cmap ready", "Cisco PIX Firewall SMTP Proxy v4.x"),
     ])
 
 def identify(host):

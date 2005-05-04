@@ -12,6 +12,8 @@ patterns = PATTERNS([
      "Cubic Circle's POP3"),
     (r"Solstice \(tm\) Internet Mail Server \(tm\) POP3 (\S+) at",
      "Solstice Internet Mail Server (Sun)"),
+    (r" POP3 service \(Netscape Messaging Server (\S+ Patch \S+) \(built .*\)\)",
+     "Netscape Messaging Server"),
     (r" POP3 service \(Netscape Messaging Server (\S+) \(built .*\)\)",
      "Netscape Messaging Server"),
     (r" POP3 server \(Netscape Messaging Server - Version (\S+)\) ready",
@@ -36,7 +38,12 @@ patterns = PATTERNS([
     (r" Lotus Notes POP3 server version (\S+) ready", "Lotus Domino"),
     (r" Stalker POP3 Server (\S+) at \s+ ready", "SIMS"),
     (r"OK POP3 server ready \(NPlex (\S+)\)", "NPlex"),
-    (r"^$", "No identification strings, possibly qmail")
+	(r"OK dovecot ready", "Dovecot"),
+	(r"OK POP3 \S+ (v2\d\d\d\.\d+) server ready", "imap-uw"),
+	(r"OK \S+ \(POP-Max (Version \S+),", "MailMax"),
+	(r"OK DPOP (Version \S+)\. <\S+>", "DMail"),
+	(r"OK POP3 server ready \(running FTGate (V\d+, \d+, \d+),", "FTGate"),
+    (r"^\+OK $", "No identification strings, possibly qmail")
     ])
 
 def strip(string):

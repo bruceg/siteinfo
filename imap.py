@@ -11,6 +11,9 @@ patterns = PATTERNS([
     (r"OK Microsoft Exchange \d+ IMAP4rev1 server (version \S+) \(.*\) ready",
      "Microsoft Exchange" ),
     (r"OK Netscape IMAP4 Service (\S+) on \S+ at ", "Netscape"),
+    (r"Netscape Messaging Server (\S+ Patch \S+)", "Netscape Messaging Server, formerly Netscape Mail Server"),
+    (r"Netscape Messaging Server (\S+)", "Netscape Messaging Server, formerly Netscape Mail Server"),
+    (r"Netscape Messaging Server", "Netscape Messaging Server, formerly Netscape Mail Server"),
     (r"OK NTMail IMAP4 server (\S+) ready", "NTMail"),
     (r"OK \S+ Cyrus IMAP4 (v\S+) server ready", "Cyrus"),
     (r"OK IMAP4 Server \(IMail (\S+)\)", "IMail"),
@@ -20,6 +23,7 @@ patterns = PATTERNS([
 	(r"OK \[.*\] Courier-IMAP ready.", "Courier IMAP"),
 	(r"OK Welcome to Binc IMAP (v\d+\.\d+\.\d+) ", "Binc IMAP"),
 	(r"OK imapfront", "mailfront"),
+	(r"OK dovecot ready", "Dovecot"),
     ])
 
 def identify(host):
