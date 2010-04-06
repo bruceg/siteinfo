@@ -43,6 +43,7 @@ patterns = PATTERNS([
 	(r"OK \S+ \(POP-Max (Version \S+),", "MailMax"),
 	(r"OK DPOP (Version \S+)\. <\S+>", "DMail"),
 	(r"OK POP3 server ready \(running FTGate (V\d+, \d+, \d+),", "FTGate"),
+	(r"^\+OK Hello there\.", "Courier IMAP"),
     (r"^\+OK $", "No identification strings, possibly qmail")
     ])
 
