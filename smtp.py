@@ -98,6 +98,8 @@ patterns = PATTERNS([
     (r"MX V.\..-. VAX", "VMS MX"),
     (r"\(PMDF#..... V", "PMDF"),
     (r"ESMTP VMailer", "VMailer"),
+    (r"Error: send HELO/EHLO first$", "Postfix"),
+    (r"Error: need MAIL command$", "Postfix"),
     (r"ESMTP Postfix", "Postfix"),
     (r"post.office v", "Post.Office"),
     (r"Connect2-SMTP", "Connect2-SMTP"),
