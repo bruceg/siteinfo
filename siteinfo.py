@@ -58,7 +58,7 @@ HTML_HEAD = """<html>
 <p><h1><center>Site Software Identification for '%(host)s' (%(ip)s)</center></h1></p>
 
 <p>Please direct all comments and especially omissions to
-<a href=\"mailto:bruceg@em.ca\">Bruce Guenter</a>.</p>
+<a href=\"mailto:bruce@untroubled.org\">Bruce Guenter</a>.</p>
 
 <p>"""
 
