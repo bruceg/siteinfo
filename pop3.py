@@ -38,7 +38,7 @@ patterns = PATTERNS([
     (r" Lotus Notes POP3 server version (\S+) ready", "Lotus Domino"),
     (r" Stalker POP3 Server (\S+) at \s+ ready", "SIMS"),
     (r"OK POP3 server ready \(NPlex (\S+)\)", "NPlex"),
-	(r"OK dovecot ready", "Dovecot"),
+	(r"OK [Dd]ovecot ready", "Dovecot"),
 	(r"OK POP3 \S+ (v2\d\d\d\.\d+) server ready", "imap-uw"),
 	(r"OK \S+ \(POP-Max (Version \S+),", "MailMax"),
 	(r"OK DPOP (Version \S+)\. <\S+>", "DMail"),
