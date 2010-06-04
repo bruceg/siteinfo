@@ -8,6 +8,8 @@ patterns = PATTERNS([
      "Microsoft Exchange"),
     (r"Microsoft Exchange \d+ POP3 server (version \S+) ready",
      "Microsoft Exchange"),
+	(r"Microsoft Exchange Server \d+ POP3 server (version \S+) ",
+	 "Microsoft Exchange"),
     (r"Cubic Circle's (v\S+) \S+ POP3 ready",
      "Cubic Circle's POP3"),
     (r"Solstice \(tm\) Internet Mail Server \(tm\) POP3 (\S+) at",
