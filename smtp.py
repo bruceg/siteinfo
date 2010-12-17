@@ -144,6 +144,7 @@ patterns = PATTERNS([
 	(r"\S+ ESMTP Lyris service ready", "Lyris"),
 	(r"User unknown to Lyris List Manager", "Lyris"),
 	(r"SMTP/cmap ready", "Cisco PIX Firewall SMTP Proxy v4.x"),
+	(r"OK entry follows, ends in \.", "smtpprox"),
     ])
 
 def identify(host):

@@ -29,6 +29,7 @@ websites = {
 	'FTGate': 'http://www.ftgate.com/',
 	'Lyris': 'http://www.lyris.com/',
 	'Marc Huber\'s FTP daemon': 'http://www.pro-bono-publico.de/projects/ftpd.html',
+	'smtpprox': 'http://bent.latency.net/smtpprox/',
 }
 
 def find(name):
