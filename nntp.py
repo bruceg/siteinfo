@@ -18,7 +18,7 @@ patterns = PATTERNS([
 	(r"20\d \S+ Netscape-Collabra/(\S+) \S+ NNRP ready", "Netscape Collabra"),
     (r" Lotus Domino NNTP Server for \S+ \((Release .*)\)", "Lotus Domino"),
     (r" Leafnode NNTP [Dd]aemon, version (\S+) ", "Leafnode"),
-    (r" newsfeeds DNEWS Version ([^,]+),", "DNews"),
+    (r"  DNEWS Version\s+([^,]+),", "DNews"),
 	(r" \(Twister (v\S+)\)", "Twister"),
     ])
 
