@@ -30,6 +30,7 @@ websites = {
 	'Lyris': 'http://www.lyris.com/',
 	'Marc Huber\'s FTP daemon': 'http://www.pro-bono-publico.de/projects/ftpd.html',
 	'smtpprox': 'http://bent.latency.net/smtpprox/',
+	'Qualcomm Qpopper': 'http://www.eudora.com/products/unsupported/qpopper/index.html',
 }
 
 def find(name):
