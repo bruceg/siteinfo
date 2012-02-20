@@ -37,6 +37,7 @@ patterns = PATTERNS([
     (r"MercuryP/32", "Mercury/32"),
     (r"OK VOPmail POP3 Server (\S+) Ready", "VOPmail"),
     (r" POP3 service ready \[\d+\] \(MDaemon (v.+)\)$", "MDaemon"),
+    (r" MDaemon (\S+) MDaemon", "MDaemon"),
     (r" Cyrus POP3 (v\S+) server ready$", "Cyrus"),
     (r" Lotus Notes POP3 server version (\S+) ready", "Lotus Domino"),
     (r" Stalker POP3 Server (\S+) at \s+ ready", "SIMS"),

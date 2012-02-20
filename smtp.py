@@ -25,6 +25,7 @@ patterns = PATTERNS([
     (r"forging of mail requires recognizable SMTP", "unknown (requires recognizable SMTP)"),
     (r" ESMTP service ready .* \(MDaemon ([^\)]+)\)", "MDaemon"),
     (r"MDaemon .* Help system currently inactive", "MDaemon"),
+    (r" SMTP MDaemon (\S+);", "MDaemon"),
     (r"Microsoft Exchange Internet Mail Connector", "Microsoft Exchange"),
     (r"Microsoft Exchange Internet Mail Service", "Microsoft Exchange"),
     (r" Microsoft ESMTP MAIL Service, (Version: \S+) ready", "Microsoft Exchange?"),

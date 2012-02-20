@@ -25,6 +25,7 @@ patterns = PATTERNS([
 	(r"OK imapfront", "mailfront"),
 	(r"OK dovecot ready", "Dovecot"),
 	(r"OK \[.*\] [Dd]ovecot ready", "Dovecot"),
+	(r" MDaemon (\S+) ready", "MDaemon"),
     ])
 
 def identify(host):
