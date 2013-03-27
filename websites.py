@@ -31,7 +31,7 @@ websites = {
 	'Marc Huber\'s FTP daemon': 'http://www.pro-bono-publico.de/projects/ftpd.html',
 	'smtpprox': 'http://bent.latency.net/smtpprox/',
 	'Qualcomm Qpopper': 'http://www.eudora.com/products/unsupported/qpopper/index.html',
-	'MDaemon', 'http://www.altn.com/Products/MDaemon-Email-Server-Windows/',
+	'MDaemon': 'http://www.altn.com/Products/MDaemon-Email-Server-Windows/',
 }
 
 def find(name):
