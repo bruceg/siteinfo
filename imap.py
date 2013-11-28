@@ -19,6 +19,7 @@ patterns = PATTERNS([
     (r"OK IMAP4 Server \(IMail (\S+)\)", "IMail"),
     (r"OK CommuniGate Pro IMAP Server (\S+) at \S+ ready", "CommuniGate Pro"),
     (r"OK OpenMail IMAP server (\S+) ready", "OpenMail"),
+    (r"OK .+ Dovecot DA ready", "Dovecot"),
 	(r"OK Courier-IMAP ready.", "Courier IMAP"),
 	(r"OK \[.*\] Courier-IMAP ready.", "Courier IMAP"),
 	(r"OK Welcome to Binc IMAP (v\d+\.\d+\.\d+) ", "Binc IMAP"),
