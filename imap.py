@@ -15,7 +15,7 @@ patterns = PATTERNS([
     (r"Netscape Messaging Server (\S+)", "Netscape Messaging Server, formerly Netscape Mail Server"),
     (r"Netscape Messaging Server", "Netscape Messaging Server, formerly Netscape Mail Server"),
     (r"OK NTMail IMAP4 server (\S+) ready", "NTMail"),
-    (r"OK \S+ Cyrus IMAP4 (v\S+) server ready", "Cyrus"),
+    (r"OK .+ Cyrus IMAP4 (v\S+) server ready", "Cyrus"),
     (r"OK IMAP4 Server \(IMail (\S+)\)", "IMail"),
     (r"OK CommuniGate Pro IMAP Server (\S+) at \S+ ready", "CommuniGate Pro"),
     (r"OK OpenMail IMAP server (\S+) ready", "OpenMail"),
